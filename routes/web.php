@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/about', function () {
+    $msg = 'made by love~';
+    return view('about',['msg'=> $msg]);
+});
