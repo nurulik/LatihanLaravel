@@ -9,11 +9,14 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <a class="navbar-brand" href="/">Lets Learn!</a>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-            <a class="nav-link" href="/">Home</a>
+        <li class="nav-item {{ (request()->is('/')) ? 'active' : '' }}">
+            <a class="nav-link" href="{{url ('/')}}">Home</a>
         </li>
-        <li class="nav-item active">
-            <a class="nav-link" href="/about">About</a>
+        <li class="nav-item {{ (request()->is('about')) ? 'active' : '' }}">
+            <a class="nav-link" href="{{url ('/about')}}">About</a>
+        </li>
+        <li class="nav-item {{ (request()->is('mahasiswa')) ? 'active' : '' }}">
+            <a class="nav-link" href="{{url ('/mahasiswa')}}">Mahasiswa</a>
         </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">

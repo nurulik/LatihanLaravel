@@ -11,11 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/about', function () {
-    $msg = 'made by love~';
-    return view('about',['msg'=> $msg]);
-});
+// Route::get('/about', function () {
+//     $msg = 'made by love~';
+//     return view('about',['msg'=> $msg]);
+// });
+
+Route::get('/', 'PageController@index');
+Route::get('/about', 'PageController@about');
+Route::get('/mahasiswa', 'MhsController@index');
